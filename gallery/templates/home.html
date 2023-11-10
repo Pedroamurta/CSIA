@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Home</h1>
+<form action="{% url 'search' %}" method="post"> 
+    {% csrf_token %}
+    <input id = "psearch" type="search" placeholder="search" name="psearch">
+    <button type="submit">Search</button>
+</form>
+{% endblock %}

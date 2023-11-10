@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if psearch %}
+    <h1>Searching for {{psearch}}</h1>
+    <br/>
+    {% for image in images %}
+        {{image}} <br/>
+    {% endfor %}
+{% else %}
+    <h1>You forgot to search</h1>
+
+{% endif %}
+
+{% endblock %}
