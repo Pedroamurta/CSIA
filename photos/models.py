@@ -10,9 +10,9 @@ class Tag(models.Model):
 
 class Image(models.Model):
 
-    image = models.ImageField(blank= False, upload_to= 'gallery/static/media')
-    title = models.CharField(max_length= 40, blank= False, unique= True)
-    tags = models.ManyToManyField(Tag, blank= True)
+    image = models.ImageField(blank= False, upload_to= 'gallery/static/media', error_messages='no file uploaded')
+    title = models.CharField(max_length= 40, blank= False, unique= True, error_messages='no title detected')
+    tags = models.ManyToManyField(Tag, blank= True, error_messages= 'someting wrong with the tags')
 
     def __str__(self):
         return self.title
