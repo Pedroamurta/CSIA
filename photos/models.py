@@ -10,7 +10,7 @@ class Tag(models.Model):
 
 class Image(models.Model):
 
-    image = models.ImageField(blank= False, upload_to= 'gallery/static/media')
+    image = models.ImageField(blank= False)
     title = models.CharField(max_length= 40, blank= False, unique= True)
     tags = models.ManyToManyField(Tag, blank= True)
 

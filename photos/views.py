@@ -13,7 +13,7 @@ def gallery_view(request):
 def create_view(request):
     form = ImageForm()
     if request.method == 'POST':
-        form = ImageForm(request.POST)
+        form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
     return render(request, 'create.html', {'form':form})
