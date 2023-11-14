@@ -2,7 +2,7 @@ h1 {
     text-align: center;
 }
 
-#nav {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 8px;
@@ -10,11 +10,11 @@ h1 {
     background-color: #333;
   }
   
-  nav li {
+  li {
     float: left;
   }
   
-  nav li a {
+  li a {
     display: block;
     color: white;
     text-align: center;
@@ -22,11 +22,11 @@ h1 {
     text-decoration: none;
   }
   
-  nav li a:hover {
+  li a:hover {
     background-color: darkcyan;
   }
 
-  nav .add {
+  .add {
     float: right;
     background-color: darkcyan;
   }
@@ -35,6 +35,3 @@ h1 {
     text-align: center;
   }
 
-  .errorlist{
-    background-color: white;
-  }
