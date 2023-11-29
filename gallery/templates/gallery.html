@@ -3,7 +3,9 @@
 {% block content %}
 <h1>Gallery</h1>
 <br>
+<div class="image-view">
 {% for image in images %}
-<figure><img src = '{{image.image.url}}'  alt={{image.title}} height="50px" width="100px" style="display: grid;"> <figcaption>{{image.title}}</figcaption></figure>
+<figure><img src = '{{image.image.url}}'  alt={{image.title}} height="100px" width="150px" style="display: grid;"> <figcaption>{{image.title}}</figcaption></figure>
 {% endfor %}
+</div>
 {% endblock %}

@@ -1,0 +1,12 @@
+.image-view{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: auto;
+    overflow-x: auto;
+
+
+}
+figcaption{
+    padding-left: 57px;
+    padding-right: 57px;
+}
