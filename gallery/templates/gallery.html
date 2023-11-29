@@ -4,6 +4,6 @@
 <h1>Gallery</h1>
 <br>
 {% for image in images %}
-    <img src = ''  alt={{image.title}}> <br/>
+<figure><img src = '{{image.image.url}}'  alt={{image.title}} height="50px" width="100px" style="display: grid;"> <figcaption>{{image.title}}</figcaption></figure>
 {% endfor %}
 {% endblock %}
