@@ -1,15 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if psearch %}
-    <h1>Searching for {{psearch}}</h1>
-    <br/>
+<h1>Search Results</h1>
+<br/>
+<div class="image-view">
     {% for image in images %}
-        {{image}} <br/>
+    <figure><img src = '{{image.image.url}}'  alt={{image.title}} height="100px" width="150px" style="display: grid;"> <figcaption>{{image.title}}</figcaption></figure>
     {% endfor %}
-{% else %}
-    <h1>You forgot to search</h1>
-
-{% endif %}
-
+</div>
 {% endblock %}
