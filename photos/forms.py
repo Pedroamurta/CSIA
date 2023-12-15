@@ -6,4 +6,3 @@ class ImageForm(forms.ModelForm):
         model = Image
         fields = '__all__'
     image = forms.ImageField(error_messages= {'required':'Image is needed'})
-        
