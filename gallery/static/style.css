@@ -30,3 +30,7 @@ nav li a{
     background-color: #333;
     text-decoration: none;
 }
+
+.active {
+    background-color: aliceblue;
+}
