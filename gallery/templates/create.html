@@ -1,14 +1,27 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<div class="containter">
-    <h1>Image Form</h1>
-
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit">
-    </form>
-
-</div>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Organizer</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'style.css' %}">  
+    </head>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li class="active"><a href="/create">+</a></li>
+        </ul>  
+    </nav>
+    <body>
+        <div class="containter">
+            <h1>Image Form</h1>
+        
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
