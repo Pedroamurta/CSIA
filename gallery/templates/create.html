@@ -6,13 +6,17 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'style.css' %}">  
     </head>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li class="active"><a href="/create">+</a></li>
-        </ul>  
-    </nav>
+    <div class="navigation">
+        <h1 class="title">Photo Organizer</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/create" class="active">Add Image</a></li>
+            </ul>  
+        </nav>
+    </div>
+
     <body>
         <div class="containter">
             <h1>Image Form</h1>
