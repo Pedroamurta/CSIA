@@ -7,8 +7,8 @@
 
 }
 figcaption{
-    padding-left: 20px;
-    padding-right: 57px;
+    width: 150 px;
+    text-align: center;
 }
 
 nav ul {
@@ -48,8 +48,6 @@ h1 {
 
 .navigation {
     background-color: #333;
-    top: 0;
-    left: 0;
     height:auto
 }
 
