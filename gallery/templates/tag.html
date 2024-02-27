@@ -13,17 +13,20 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/create">Add Image</a></li>
-                <li><a href="/tag">Create Tag</a></li>
+                <li><a href="/tag" class ="active">Create Tag</a></li>
             </ul>  
         </nav>
     </div>
+
     <body>
-        <h1>Search Results</h1>
-        <br/>
-        <div class="image-view">
-            {% for image in images %}
-            <figure><img src = '{{image.image.url}}'  alt={{image.title}} height="100px" width="150px" style="display: grid;"> <figcaption>{{image.title}}</figcaption></figure>
-            {% endfor %}
-        </div> 
+        <div class="containter">
+            <h1>Tag Form</h1>
+        
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>

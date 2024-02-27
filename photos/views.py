@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import ImageForm
+from .forms import ImageForm, TagForm
 from .models import Image, Tag
 
 # Create your views here.
@@ -27,3 +27,11 @@ def search_view(request):
                                                'images': images})
     else:
         return render(request, 'search.html', {})
+    
+def tag_view(request):
+    form = TagForm()
+    if request.method == 'POST':
+        form = TagForm(request.POST)
+        if form.is_valid():
+            form.save()
+    return render(request, 'tag.html',{'form':form})
