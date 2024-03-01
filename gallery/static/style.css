@@ -32,6 +32,11 @@ nav li a{
     text-decoration: none;
 }
 
+nav li a:hover {
+    background-color: #111;
+    text-decoration: underline;
+}
+
 .active {
     background-color: #04AA6D;
 }
@@ -48,12 +53,9 @@ h1 {
 
 .navigation {
     background-color: #333;
-    height:auto
+    margin-top: -24px;
 }
 
-body {
-    background-color: white;
-}
 
 html, body {
     padding: 0;
